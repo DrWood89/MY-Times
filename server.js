@@ -35,7 +35,7 @@ app.use(router);
 
 mongoose.Promise = global.Promise;
 //if deployed, use deployed database. Otherwise use the local mongoHeadlines database
-var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var db = process.env.MONGODB_URI || "mongodb://<admin>:<admin1>@ds153890.mlab.com:53890/mongoHeadlines";
 
 //connect mongoose to our databse 
 mongoose.connect(db, function(error) {
