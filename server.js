@@ -35,7 +35,7 @@ app.use(router);
 
 mongoose.Promise = global.Promise;
 //if deployed, use deployed database. Otherwise use the local mongoHeadlines database
-var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var db = process.env.MONGODB_URI || "mongodb://heroku_g68bh0p2:qudg4rteevlbps1bgdoope5iuu@ds153890.mlab.com:53890/heroku_g68bh0p2";
 
 //connect mongoose to our databse 
 mongoose.connect(db, function(error) {
@@ -51,3 +51,4 @@ mongoose.connect(db, function(error) {
 app.listen(PORT, function () {
     console.log("listening on port:" + PORT);
 });
+
