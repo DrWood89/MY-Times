@@ -90,8 +90,8 @@ $(document).ready(function () {
                 "</h4>",
                 "<hr />",
                 "<ul class='list-group note-container'>",
-                "</ul",
-                "<textarea placeholder='New Note'rows='4' cols='60'></textarea>",
+                "</ul>",currentArticle._headlineId,
+                "<textarea placeholder='New Note' rows='4' cols='60'></textarea>",
                 "<button class='btn btn-success save'>Save Note</button>",
                 "</div"].join("");
             //addig formatted html to note modal
