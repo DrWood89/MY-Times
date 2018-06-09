@@ -55,7 +55,7 @@ $(document).ready(function () {
                 "<h3>",
                 articles.headline,
                 "<a class='btn btn-danger delete'>Delete from Saved</a>",
-                "<a class='btn btn-info notes'>Add Notes</a>",
+                "<a class='btn btn-info notes'>Article Notes</a>",
                 "</h3>",
                 "</div>",
                 "<div class='panel-body'>",
@@ -82,6 +82,7 @@ $(document).ready(function () {
     function handleArticleNotes() {
         var currentArticle = $(this).parents(".panel").data();
         $.get("/api/notes/" + currentArticle._id).then(function (data) {
+            //building html to add notes
             var modalText = [
                 "<div class='container-fluid text-center'>",
                 "<h4>Notes For Article: ",
@@ -90,14 +91,15 @@ $(document).ready(function () {
                 "<hr />",
                 "<ul class='list-group note-container'>",
                 "</ul",
-                "<textarea placeholder='New Note' rows='4' cols='60'></textarea>",
+                "<textarea placeholder='New Note'rows='4' cols='60'></textarea>",
                 "<button class='btn btn-success save'>Save Note</button>",
                 "</div"].join("");
+            //addig formatted html to note modal
             bootbox.dialog({
                 message: modalText,
                 closeButton: true
             });
-            var moteData = {
+            var noteData = {
                 _id: currentArticle._id,
                 notes: data || []
             };
@@ -111,7 +113,7 @@ $(document).ready(function () {
         var currentNote;
         if (!data.notes.length) {
             currentNote = [
-                "<li class='list-group-item note'>",
+                "<li class='list-group-item'>",
                 "No notes for this article yet.",
                 "</li>"].join("");
             notesToRender.push(currentNote);

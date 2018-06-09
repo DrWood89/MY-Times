@@ -53,7 +53,7 @@ module.exports = function(router) {
         });
     });
 
-    router.get("/api/notes/headlines_id?", function(req, res){
+    router.get("/api/notes/:headline_id?", function(req, res){
         var query = {};
         if (req.params.headline_id){
             query._id = req.params.headline_id;
@@ -66,7 +66,7 @@ module.exports = function(router) {
 
     router.delete("/api/notes/:id", function(req, res){
         var query = {};
-        query_id = req.params.id;
+        query._id = req.params.id;
         notesController.delete(query, function(err, data){
             res.json(data);
         });

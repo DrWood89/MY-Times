@@ -5,7 +5,7 @@ html {
 
 body {
     margin-bottom: 80PX;
-    /* background-image: url("../images/paper.png"); */
+    background-image: url("../images/paper.jpg");
 }
 
 .footer {
@@ -27,13 +27,130 @@ body {
     font-family: "Cormorant SC";
     padding: 0;
     box-shadow: 10px 5px 20px 2px lightslategray;
+    background-image: url("../images/download.jpg");
 }
 
 .jumbotron .overlay {
-    background: linear-gradient(#333, black);
     position: absolute;
-    opacity: 0.7;
-    z-index: auto;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
+    z-index: auto;
+    background: linear-gradient(#333, black);
+    opacity: 0.7;
 }
+
+.jumbotron .caption {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.jumbotron .caption h1, .jumbotron .caption p {
+    color: white;
+}
+
+.scrape-new {
+    cursor: pointer;
+}
+
+.btn {
+    text-transform: uppercase;
+    border: none;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.btn-danger {
+    -webkit-background-size: 200% 200%;
+    background-size: 200% 200%;
+    background-position: 50%;
+}
+.btn-danger {
+    color: #ffffff;
+    background-color: #e51c23;
+    border-color: transparent;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 16px;
+    font-size: 13px;
+    line-height: 1.846;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navbar-nav > li > a.scrape-new {
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 800;
+    color: white;
+}
+
+.panel.panel-default .panel-heading .btn {
+    position: relative;
+    top: 5px;
+    right: -20px;
+}
+
+.btn {
+    text-transform: uppercase;
+    border: none;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.btn-info {
+    -webkit-background-size: 200% 200%;
+    background-size: 200% 200%;
+    background-position: 50%;
+}
+.btn-info {
+    color: #ffffff;
+    background-color: #9c27b0;
+    border-color: transparent;
+}
+.btn {
+    display: inline-block; 
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 16px;
+    font-size: 13px;
+    line-height: 1.846;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+

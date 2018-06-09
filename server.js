@@ -33,6 +33,7 @@ app.use(bodyParser.urlencoded({
 //make router our intermediate
 app.use(router);
 
+mongoose.Promise = global.Promise;
 //if deployed, use deployed database. Otherwise use the local mongoHeadlines database
 var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
@@ -50,3 +51,5 @@ mongoose.connect(db, function(error) {
 app.listen(PORT, function () {
     console.log("listening on port:" + PORT);
 });
+
+module.exports = { mongoose };
